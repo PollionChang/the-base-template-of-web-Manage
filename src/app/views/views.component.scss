@@ -1,0 +1,85 @@
+:host ::ng-deep .logo {
+  background: #3B3A3F;
+  border-radius: 6px;
+  margin: 29px 0px 40px 0px;
+  text-align: center;
+  .z_index_font {
+    margin-top: 4px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #CCCCCC;
+  }
+}
+
+:host ::ng-deep .ant-layout-sider {
+  background: #3b3a3f;
+}
+
+:host ::ng-deep .ant-layout-sider-collapsed .nav-text {
+  display: none;
+}
+
+:host ::ng-deep .ant-layout-sider-collapsed .ant-menu-submenu-title:after {
+  display: none;
+}
+
+:host ::ng-deep .ant-layout-sider-collapsed .anticon {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+:host ::ng-deep .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+:host ::ng-deep .trigger:hover {
+  color: #108ee9;
+}
+
+:host ::ng-deep .first-nav {
+  -webkit-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  font-size: 16px;
+  margin-top: 0px;
+  display: inline-block;
+}
+
+:host ::ng-deep .nav-root {
+  min-width: 14px;
+  margin-right: 12px;
+  transition: font-size .15s cubic-bezier(.215, .61, .355, 1), margin .3s cubic-bezier(.645, .045, .355, 1);
+}
+
+:host ::ng-deep .ant-menu-dark {
+  background: #3B3A3F;
+}
+
+:host ::ng-deep .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  background: #302F34;
+}
+
+:host ::ng-deep .ant-menu-dark .ant-menu-item:hover,
+:host ::ng-deep .ant-menu-dark .ant-menu-item-active,
+:host ::ng-deep .ant-menu-dark .ant-menu-submenu-active,
+:host ::ng-deep .ant-menu-dark:not(.ant-menu-inline) .ant-menu-submenu-open,
+:host ::ng-deep .ant-menu-dark .ant-menu-submenu-selected,
+:host ::ng-deep .ant-menu-dark .ant-menu-submenu:hover,
+:host ::ng-deep .ant-menu-dark .ant-menu-submenu-title:hover {
+  color: #FFB71F;
+}
+
+:host ::ng-deep .ant-menu.ant-menu-dark .ant-menu-item-selected {
+  background-color: transparent;
+  color: #FFB71F;
+}
+
+:host ::ng-deep .nav-text {
+  font-size: 16px;
+  vertical-align: super;
+}
+

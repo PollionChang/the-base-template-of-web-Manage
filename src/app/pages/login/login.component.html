@@ -1,0 +1,69 @@
+<script src="../../../../../hooray-hds-page/src/app/login/login.component.ts"></script>
+<nav class="nav">
+  <div class="navBox">
+    <div class="title">虎瑞数据平台</div>
+
+    <div class="website">
+      <span class="option">虎瑞官网</span>
+      <span class="option">商务合作</span>
+    </div>
+  </div>
+</nav>
+
+
+<div class="content">
+
+  <div class="autoBox">
+
+    <div class="wrap">
+
+      <div class="main">
+        <img src="../../../assets/img/main.png">
+      </div>
+
+      <form novalidate [formGroup]="login" (ngSubmit)="onSubmit(login)">
+        <div class="login_box">
+          <div class="tips" id="tips"> {{errMsg}}</div>
+          <div class="top"></div>
+          <div class="userName">
+            <span class="portrait1"></span>
+            <input type="text" class="userNameinput"
+                   placeholder="用户名" id="input-userName"
+                   name="userName" formControlName="userName"/>
+          </div>
+          <div class="password">
+            <span class="portrait2"></span>
+            <input type="password" class="userNameinput" placeholder="密码" id="input-password" name="password"
+                   formControlName="password"/>
+          </div>
+
+          <div *ngIf="showCaptcha">
+            <div class="identify">
+              <input type="text" name="identify" id="input-identify" style="text-align: center;"
+                     formControlName="identify"   placeholder="请输入验证码"/>
+            </div>
+
+            <div class="identifyImg">
+
+
+              <div class="Idimg"><img id="captcha_img" [src]="captcha_img_src" (click)="refershCaptcha()"></div>
+
+
+            </div>
+          </div>
+
+          <button type="submit" class="loginButton">登 录</button>
+          <div class="contract"><input type="checkbox" style="vertical-align:middle;" checked="" id="agree"
+                                       formControlName="agree"
+                                       name="agree">我同意并已阅读<span style="color:#FEC04E;">《虎瑞互动营销服务协议》</span></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="copyright">
+  <div class="detail">©2017 深圳市虎瑞科技有限公司 All Rights Reserved 粤ICP备 14044339</div>
+</div>
+

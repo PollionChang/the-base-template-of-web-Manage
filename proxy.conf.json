@@ -1,0 +1,12 @@
+{
+  "/hds-server": {
+    "target": "http://tv.hooray.cn",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/bigdata-server": {
+    "target": "http://hdc.hooray.cn",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

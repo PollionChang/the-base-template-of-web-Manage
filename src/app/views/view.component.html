@@ -1,0 +1,39 @@
+<nz-layout style="height: 100%">
+  <nz-sider nzCollapsible [nzTrigger]="null" [(nzCollapsed)]="isCollapsed" [nzWidth]="220" [nzCollapsedWidth]="75"
+            [nzBreakpoint]="'lg'">
+    <div class="logo">
+      <div><img [src]="isCollapsed?'../../assets/img/HooRay1.png':'../../assets/img/logo.png'"></div>
+      <p class="z_index_font" [ngStyle]="{'display':isCollapsed?'none':'inline'}">虎瑞互动营销平台</p>
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
+      <ng-container *ngFor="let item of menu">
+        <li *ngIf="!item.children" nz-menu-item>
+          <div title><i class="{{item.iconClass}} nav-root"></i><span class="nav-text">{{item.title}}</span></div>
+        </li>
+        <li *ngIf="item.children" nz-submenu [nzOpen]="true">
+          <div title>
+            <i class="{{item.iconClass}} nav-root"></i><span class="nav-text">{{item.title}}</span>
+          </div>
+          <ul *ngIf="item.children">
+            <li nz-menu-item *ngFor="let k of item.children;let i=index;" [routerLink]="[k.link]"
+                routerLinkActive="ant-menu-item-selected" [nzSelected]="i===0">{{k.title}}
+            </li>
+
+          </ul>
+
+        </li>
+      </ng-container>
+
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header style="background: #fff; padding:0;">
+      <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed"
+         (click)="isCollapsed=!isCollapsed"></i>
+    </nz-header>
+    <nz-content style="margin:0 16px;height: 100%">
+      <router-outlet></router-outlet>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
+
